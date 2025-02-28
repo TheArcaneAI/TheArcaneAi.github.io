@@ -1,9 +1,6 @@
 [build]
-  command = "next build && next export"
-  publish = "out"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+  command = "npm run build"  # Runs the Vite build script
+  publish = "dist"  # Vite outputs to the `dist` directory
 
 [build.environment]
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  NODE_VERSION = "20"  # Specify your Node.js version
